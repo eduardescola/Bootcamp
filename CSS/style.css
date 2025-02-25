@@ -1,0 +1,84 @@
+/* Selecciona todos los elementos */
+* {
+    border: 1px solid red; /* Solo para visualizar */
+}
+
+/* Selecciona todos los elementos p */
+p {
+    color: blue;
+}
+
+/* Selecciona el elemento con id title-1 */
+#title-1 {
+    font-size: 24px;
+}
+
+/* Selecciona los elementos con clase .bg-yellow */
+.bg-yellow {
+    background-color: yellow;
+}
+
+/* Selecciona los elementos que tengan atributo id */
+[id] {
+    font-weight: bold;
+}
+
+/* Selecciona los elementos que tengan atributo id y como valor title-1 */
+[id="title-1"] {
+    text-decoration: underline;
+}
+
+/* Selecciona los elementos que tengan atributo href y valor https://www.yahoo.com */
+[href="https://www.yahoo.com"] {
+    color: purple;
+}
+
+/* Selecciona los elementos que tengan atributo class con valor que empiece por title */
+[class^="title"] {
+    font-style: italic;
+}
+
+/* Selecciona los elementos que tengan atributo href y acaben con .com */
+[href$=".com"] {
+    font-weight: bold;
+}
+
+/* Selecciona los elementos que tengan atributo class con valor title y lo que siga detrás */
+[class|="title"] {
+    text-transform: uppercase;
+}
+
+/* Selecciona los elementos que tengan atributo href y el valor contenga 127 */
+[href*="127"] {
+    background-color: lightgray;
+}
+
+/* Selecciona los elementos que tengan atributo y empiece por http */
+[href^="http"] {
+    border-bottom: 2px dashed green;
+}
+
+/* Selecciona los elementos que sean a, p o h1 desde una única regla CSS */
+a, p, h1 {
+    font-family: Arial, sans-serif;
+}
+
+/* Selecciona los elementos que pertenezcan a main y sean p */
+main p {
+    font-size: 18px;
+}
+
+/* Selecciona el siguiente hermano de h1 */
+h1 + * {
+    color: red;
+}
+
+/* Selecciona todos los hermanos de h1 */
+h1 ~ * {
+    margin-top: 10px;
+}
+
+/* Selecciona los elementos que sean hijos directos de main */
+main > * {
+    padding: 5px;
+}
