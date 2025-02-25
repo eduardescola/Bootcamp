@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Teléfono</title>
+</head>
+<body>
+    <h2>Formulario de Contacto</h2>
+    <form>
+        <label for="telefono">Número de teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 612345678" 
+               pattern="^\d{9}$" required
+               title="El número de teléfono debe tener 9 dígitos.">
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
