@@ -30,7 +30,7 @@
             font-size: 22px;
             padding: 5px 15px;
             color: black;
-            margin-bottom: 10px; 
+            margin-bottom: 10px;
             position: absolute;
             top: -43px;
             left: 50%;
@@ -49,11 +49,14 @@
             border-right: none; /* No poner borde derecho */
             border-bottom: 3px solid black;
         }
-        .footer {
-            background-color: #4aa8f0;
+        .footer td {
+            background-color: #4aa8f0; /* Fondo azul */
             font-weight: bold;
-            padding: 10px;
             font-size: 16px;
+            padding: 10px;
+            text-align: center;
+            color: black; /* Texto en negro */
+            border: none; /* Sin bordes */
         }
     </style>
 </head>
@@ -81,8 +84,10 @@
                 <td>1234.5</td>
                 <td>Comedores</td>
             </tr>
+            <tr class="footer">
+                <td colspan="3">* El IVA no está incluido en las ventas</td>
+            </tr>
         </table>
-        <div class="footer">* El IVA no está incluido en las ventas</div>
     </div>
 </body>
 </html>
