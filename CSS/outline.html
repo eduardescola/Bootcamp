@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto sobre Outline</title>
+    <style>
+        body {
+            background-color: #dcd6f7;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Caja roja con outline verde */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 20px; /* Bordes redondeados */
+            outline: 5px solid green; /* Outline de color verde */
+            transition: outline 0.3s, transform 0.3s; /* Transición suave */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Efecto cuando el cursor pasa por encima (hover) */
+        .box:hover {
+            outline: 5px solid yellow; /* Cambia el color del outline a amarillo */
+            transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+        }
+
+        /* Efecto cuando se hace clic (active) */
+        .box:active {
+            outline: 5px solid blue; /* Cambia el color del outline a azul */
+            transform: scale(0.95); /* Disminuye el tamaño ligeramente */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        Haz clic o pasa el cursor
+    </div>
+
+</body>
+</html>
