@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Desbordamiento</title>
+    <style>
+      body {
+        background-color: #dcd6f7;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Contenedor con desbordamiento oculto */
+      .overflow-hidden-container {
+        width: 300px;
+        height: 150px;
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid black;
+        overflow: hidden; /* Oculta el contenido desbordado */
+        background-color: #fce4bc;
+      }
+
+      /* Contenedor con barra de desplazamiento a la izquierda cuando hay desbordamiento */
+      .overflow-scroll-container {
+        width: 300px;
+        height: 150px;
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid black;
+        overflow-x: auto; /* Barra de desplazamiento solo horizontal */
+        background-color: #fce4bc;
+      }
+
+      /* Para hacer que el contenido se desborde y demostrar los efectos */
+      .content {
+        width: 500px; /* Más ancho que el contenedor */
+        height: 100%;
+        background-color: #a2c8f0;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contenedor con desbordamiento oculto -->
+    <div class="overflow-hidden-container">
+      <div class="content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+        doloremque deserunt, dolore dolores porro dolorem, odit recusandae optio
+        eum corporis nemo sequi magnam vitae exercitationem non minima velit
+        molestiae molestias! Ab excepturi magnam vel quis perferendis dolorum,
+        reprehenderit ipsam vitae repellendus nobis minima, rerum velit natus ea
+        optio, nisi dolor blanditiis in iste omnis illo quisquam. Similique quos
+        enim quibusdam. Illo alias voluptatem dolore architecto ut, quo maiores
+        et? Iste quasi natus porro rerum, officia consequatur rem dolore
+        nesciunt fugiat fugit at voluptatem laudantium asperiores pariatur
+        dolores, laborum unde ipsum! Omnis cum dolore laborum nobis et veniam
+        nostrum magni cumque, dignissimos asperiores fuga reprehenderit, odio
+        consequuntur architecto, amet non! Quam maiores voluptas esse et quidem
+        laboriosam aut aliquam eaque necessitatibus! A molestias sit reiciendis
+        fugiat, corporis nesciunt ducimus unde saepe natus, rerum harum
+        asperiores similique, pariatur ex itaque qui nostrum provident.
+        Quibusdam, voluptatum. Minus quaerat saepe vel ipsum atque facilis.
+        Atque ratione nostrum dignissimos recusandae temporibus voluptatibus,
+        eaque debitis qui laborum eius ducimus illo sed minima illum, dicta
+        optio sapiente dolores vero, officia sit excepturi cumque laboriosam
+        deleniti. Quos, qui! Iusto temporibus error mollitia in dolore nam omnis
+        eos nostrum aspernatur, dolores enim libero facere maiores possimus nemo
+        repellat ipsa! Beatae ratione ad fugiat labore ullam, minus voluptates
+        impedit harum. Aliquam quo labore quisquam nemo vitae accusantium amet
+        error, quas esse sit ratione optio. Illum, saepe minus enim ullam
+        eligendi reiciendis magni minima culpa, totam blanditiis unde? Itaque,
+        dolore explicabo! Iure maxime dicta velit perspiciatis repellendus error
+        itaque rem, quia, pariatur, obcaecati veniam blanditiis doloremque
+        dolores fugiat voluptates laudantium minima assumenda! Doloribus
+        necessitatibus quo temporibus optio aut consequatur eaque ea. Aspernatur
+        quo eum velit molestiae? Sit enim quia repellat eveniet laboriosam,
+        voluptatum cupiditate magnam nisi magni, ex animi, dignissimos optio!
+        Amet assumenda fugiat debitis eum saepe libero odio sequi ipsum.
+      </div>
+    </div>
+
+    <!-- Contenedor con barra de desplazamiento a la izquierda cuando hay desbordamiento -->
+    <div class="overflow-scroll-container">
+      <div class="content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ea optio
+        voluptatum numquam voluptate quas provident? Recusandae, nulla ipsa
+        saepe delectus perferendis distinctio assumenda, reprehenderit similique
+        quaerat eius molestiae optio! Iure suscipit ab, voluptatum est maiores
+        consectetur perspiciatis tempora ipsum quidem repellat similique aliquid
+        magni quia animi quis voluptas voluptate aut nulla dicta recusandae
+        minus atque? Assumenda cumque ab tenetur? Molestiae, quibusdam!
+        Consequuntur nulla reiciendis omnis aspernatur perspiciatis at minima,
+        distinctio pariatur magnam, mollitia neque atque libero quidem sapiente
+        nam quae praesentium optio recusandae voluptatum qui odio nesciunt
+        voluptatibus cum? Quam in perferendis distinctio molestiae ex dolorum
+        harum est a! Laboriosam ipsam vitae explicabo minus ut nihil optio
+        necessitatibus eos, culpa adipisci, iure reiciendis dolore qui quaerat.
+        Doloribus, voluptatibus minus. Ab magni minima accusamus sunt, harum et,
+        fugit, ducimus molestiae ad cupiditate beatae nostrum sapiente expedita
+        unde libero quam vitae totam facilis cum! Fugiat voluptates autem
+        excepturi, harum eos cum! Quo, quod in suscipit a repellendus excepturi
+        voluptatibus quis totam aliquam mollitia dolor sapiente, blanditiis
+        delectus ducimus odio non consectetur expedita. Dolorem nobis ratione
+        tempore praesentium facere ad cumque molestiae! Earum sint velit,
+        voluptatibus voluptas eveniet beatae quo sequi assumenda blanditiis,
+        nihil aut maiores facilis laborum veritatis laboriosam. Eveniet tempora
+        velit iure assumenda est asperiores corrupti, delectus quam autem quis.
+        Vel dolorum animi sunt consequuntur fuga sit sequi eveniet, rerum modi,
+        provident vitae eum assumenda earum. Distinctio dolorem quod laudantium
+        nam, impedit, accusantium asperiores quia iusto ea inventore minus
+        ipsum! Doloremque debitis autem numquam, enim ad, illo repudiandae vero
+        excepturi possimus amet quisquam? Laboriosam ad repellendus aut! Dolor
+        accusantium molestiae reprehenderit impedit corporis eos dignissimos
+        delectus similique, laudantium, quia enim. Placeat iste quasi unde
+        exercitationem, blanditiis dolores, at est officia corrupti aliquid
+        libero sed veniam deleniti modi ullam dolor esse! Dolorem labore modi,
+        voluptas illo eligendi laborum dolores dolore debitis?
+      </div>
+    </div>
+  </body>
+</html>
