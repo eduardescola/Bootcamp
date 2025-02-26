@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas Mensuales</title>
+    <style>
+        body {
+            background-color: #dcd6f7;
+            font-family: Arial, sans-serif;
+        }
+        .table-container {
+            width: 50%;
+            margin: 40px auto 0; /* Baja la tabla un poco más */
+            border: 6px solid black;
+            border-radius: 25px 25px 0 0; /* Elimina el border-radius inferior */
+            background-color: #fce4bc;
+            text-align: center;
+            padding: 20px 10px 10px;
+            position: relative;
+        }
+        .table-header {
+            background-color: #4aa8f0;
+            font-weight: bold;
+            font-size: 22px;
+            padding: 5px 15px;
+            display: inline-block;
+            position: absolute;
+            top: -40px; /* Ajuste fino para que se vea mejor */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 2px; /* Reducir la separación entre celdas */
+        }
+        th, td {
+            padding: 8px 10px; /* Reducir el padding para que todo esté más compacto */
+        }
+        th {
+            font-weight: bold;
+            background-color: #fce4bc;
+            border: none; /* Sin bordes en la fila de encabezado */
+        }
+        td {
+            border-left: 1px solid black;  /* Mantener el borde izquierdo */
+            border-right: none; /* No poner borde derecho */
+            border-bottom: 3px solid black; /* Borde inferior más fuerte */
+        }
+        tr:last-child td {
+            border-bottom: 3px solid black; /* Borde fuerte debajo de la última fila */
+        }
+        .footer {
+            background-color: #4aa8f0;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <div class="table-header">Ventas mensuales</div>
+        <table>
+            <tr>
+                <th>Trabajador</th>
+                <th>Total</th>
+                <th>Departamento</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>5,135€</td>
+                <td>Construcción</td>
+            </tr>
+            <tr>
+                <td>Francisco Chang</td>
+                <td>3124,28</td>
+                <td>Dormitorios</td>
+            </tr>
+            <tr>
+                <td>Maria Anders</td>
+                <td>1234.5</td>
+                <td>Comedores</td>
+            </tr>
+        </table>
+        <div class="footer">* El IVA no está incluido en las ventas</div>
+    </div>
+</body>
+</html>
