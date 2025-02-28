@@ -109,9 +109,9 @@ body {
       height: 100px; /* Aumentamos la altura de los bloques azules en pantallas pequeñas */
     }
   
-    /* Mostrar solo un bloque gris, ocultando el segundo */
-    .container > .gray:nth-of-type(2) {
-      display: none; /* Ocultamos el segundo bloque gris */
+    /* Crear una clase especial para los últimos 3 bloques grises */
+    .gray-hide {
+    display: none; /* Ocultamos estos bloques */
     }
   }
   
