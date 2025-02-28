@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diana</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #a7d8a2; /* Fondo verde */
+      margin: 0;
+    }
+
+    .target {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 10px solid #bbb; /* Borde gris claro que oculta el verde */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: white; /* Fondo blanco para la parte interior de la diana */
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .circle-1 {
+      width: 270px;
+      height: 270px;
+      background: red;
+      z-index: 1; /* Rojo */
+    }
+
+    .circle-2 {
+      width: 240px;
+      height: 240px;
+      background: white;
+      z-index: 2; /* Blanco */
+    }
+
+    .circle-3 {
+      width: 210px;
+      height: 210px;
+      background: red;
+      z-index: 3; /* Rojo */
+    }
+
+    .circle-4 {
+      width: 180px;
+      height: 180px;
+      background: white;
+      z-index: 4; /* Blanco */
+    }
+
+    .circle-5 {
+      width: 150px;
+      height: 150px;
+      background: red;
+      z-index: 5; /* Rojo */
+    }
+
+    .circle-6 {
+      width: 120px;
+      height: 120px;
+      background: white;
+      z-index: 6; /* Blanco */
+    }
+
+    .circle-7 {
+      width: 90px;
+      height: 90px;
+      background: red;
+      z-index: 7; /* Rojo */
+    }
+
+    .cross-lines {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      z-index: 8;
+    }
+
+    .horizontal, .vertical {
+      position: absolute;
+      background-color: black;
+    }
+
+    .horizontal {
+      width: 100%;
+      height: 5px;
+    }
+
+    .vertical {
+      height: 100%;
+      width: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="target">
+    <!-- Circles for the target rings -->
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+    <div class="circle circle-4"></div>
+    <div class="circle circle-5"></div>
+    <div class="circle circle-6"></div>
+    <div class="circle circle-7"></div>
+    
+    <!-- Cross lines -->
+    <div class="cross-lines">
+      <div class="horizontal"></div>
+      <div class="vertical"></div>
+    </div>
+  </div>
+
+</body>
+</html>
