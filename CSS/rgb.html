@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores Primarios y Secundarios</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px;
+            vertical-align: middle;
+        }
+        .primary-color {
+            font-weight: bold;
+            font-size: 24px;
+            vertical-align: middle;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .primary-colors .circle, .secondary-colors .circle {
+            margin: 0 15px;
+        }
+        h1, h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Colores primarios</h1>
+    <div class="primary-colors">
+        <div class="circle" style="background-color: #ff0000;"></div> <!-- Rojo -->
+        <div class="circle" style="background-color: #00ff00;"></div> <!-- Verde -->
+        <div class="circle" style="background-color: #0000ff;"></div> <!-- Azul -->
+    </div>
+
+    <h2>Colores secundarios</h2>
+    <div class="secondary-colors">
+        <div class="circle" style="background-color: #ff0000;"></div> <!-- Rojo -->
+        <span class="primary-color">+</span>
+        <div class="circle" style="background-color: #0000ff;"></div> <!-- Azul -->
+        <span class="primary-color">=</span>
+        <div class="circle" style="background-color: #800080;"></div> <!-- Morado -->
+    </div>
+
+    <div class="secondary-colors">
+        <div class="circle" style="background-color: #0000ff;"></div> <!-- Azul -->
+        <span class="primary-color">+</span>
+        <div class="circle" style="background-color: #00ff00;"></div> <!-- Verde -->
+        <span class="primary-color">=</span>
+        <div class="circle" style="background-color: #00ffff;"></div> <!-- Cian -->
+    </div>
+
+    <div class="secondary-colors">
+        <div class="circle" style="background-color: #ff0000;"></div> <!-- Rojo -->
+        <span class="primary-color">+</span>
+        <div class="circle" style="background-color: #00ff00;"></div> <!-- Verde -->
+        <span class="primary-color">=</span>
+        <div class="circle" style="background-color: #ffff00;"></div> <!-- Amarillo -->
+    </div>
+</body>
+</html>
