@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Colores para los bloques */
+  .orange {
+    background-color: orange;
+    height: 50px;
+    flex: 1 1 100%; /* Los bloques naranjas estarán apilados en pantallas pequeñas */
+  }
+  
+  .yellow {
+    background-color: yellow;
+    height: 50px;
+    flex: 1 1 100%; /* El bloque amarillo ocupa toda la fila */
+  }
+  
+  .blue {
+    background-color: blue;
+    height: 50px;
+    flex: 1 1 100%; /* Los bloques azules estarán apilados */
+  }
+  
+  .gray {
+    background-color: gray;
+    height: 50px;
+    flex: 1 1 48%; /* Los bloques grises ocuparán el 48% de la fila */
+  }
+  
+  /* Comportamiento en pantallas grandes */
+  @media (min-width: 1024px) {
+    .container {
+      flex-wrap: wrap; /* Los bloques se alinean en filas */
+      justify-content: space-between;
+    }
+  
+    /* Bloques naranjas alineados horizontalmente */
+    .container > .orange {
+      flex: 1 1 48%;
+    }
+  
+    /* El bloque amarillo ocupa toda la fila y es mucho más grande que en el mediano */
+    .container > .yellow {
+      flex: 1 1 100%;
+      height: 150px; /* Aumentamos la altura del bloque amarillo */
+    }
+  
+    /* Los bloques azules se alinean en una fila */
+    .container > .blue {
+      flex: 1 1 32%;
+      height: 100px; /* Aumentamos la altura de los bloques azules */
+    }
+  
+    /* Los bloques grises están todos en una fila */
+    .container > .gray {
+      flex: 1 1 22%;
+      height: 70px; /* Aumentamos la altura de los bloques grises */
+    }
+  }
+  
+  /* En pantallas medianas (768px - 1024px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      flex-wrap: wrap;
+    }
+  
+    /* Bloques naranjas apilados */
+    .container > .orange {
+      flex: 1 1 100%; /* Se apilan */
+    }
+  
+    /* El bloque amarillo más grande en altura */
+    .container > .yellow {
+      flex: 1 1 100%; /* Ocupa toda la fila */
+      height: 100px; /* Aumentamos la altura del amarillo */
+    }
+  
+    /* Los bloques azules apilados con más altura */
+    .container > .blue {
+      flex: 1 1 100%; /* Los bloques azules estarán apilados */
+      height: 70px; /* Aumentamos la altura de los bloques azules */
+    }
+  
+    /* Los bloques grises, dos por fila */
+    .container > .gray {
+      flex: 1 1 48%; /* Los bloques grises estarán en dos filas de dos */
+    }
+  }
+  
+  /* En pantallas pequeñas (menos de 768px) */
+  @media (max-width: 767px) {
+    .container > .orange, .container > .yellow, .container > .blue, .container > .gray {
+      flex: 1 1 100%; /* Los bloques ocuparán el 100% del ancho y se apilarán */
+    }
+  
+    /* Aumentamos la altura de los bloques azules en pantallas pequeñas */
+    .container > .blue {
+      height: 100px; /* Aumentamos la altura de los bloques azules en pantallas pequeñas */
+    }
+  
+    /* Mostrar solo un bloque gris, ocultando el segundo */
+    .container > .gray:nth-of-type(2) {
+      display: none; /* Ocultamos el segundo bloque gris */
+    }
+  }
+  
