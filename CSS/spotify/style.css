@@ -1,0 +1,217 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Hero */
+.hero {
+    background-image: url('./images/landing.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 200px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Features */
+.features {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: black;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.feature h3 {
+    color: #00B172;
+}
+
+.feature p{
+    color: black;
+}
+
+.feature img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Search-Browse-Discover */
+.search-browse-discover {
+    background-color: #00B172;
+    padding: 80px 0;
+}
+
+.search-browse-discover .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Deja espacio entre las tres columnas */
+    position: relative;
+}
+
+/* Columna izquierda */
+.left-content {
+    flex: 0.2; /* Ajuste del tamaño de la columna izquierda */
+    padding-right: 20px; /* Menos espacio a la derecha */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    margin-left: 0; /* Quitamos el margen izquierdo */
+    height: 100%; /* Ocupa toda la altura disponible */
+}
+
+/* Título en la columna izquierda */
+.left-content h2 {
+    font-size: 2.2em; /* Reducimos el tamaño del texto */
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-decoration: underline; /* Subrayado del título */
+    white-space: nowrap; /* Evita el salto de línea solo en el título */
+    overflow: hidden; /* Evita que el texto sobresalga */
+    text-overflow: ellipsis; /* Agrega "..." si el texto es demasiado largo */
+}
+
+/* Resto de la columna izquierda (Opciones), distribuye las opciones en el espacio restante */
+.left-content .options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px; /* Añade separación entre las opciones */
+    flex-grow: 1; /* Permite que las opciones ocupen el espacio restante */
+    justify-content: flex-start; /* Asegura que las opciones estén al inicio */
+    overflow-y: auto; /* Permite desplazamiento si es necesario */
+    margin-top: 20px; /* Para asegurar separación después del título */
+}
+
+.option {
+    margin-bottom: 0; /* Elimina el margen inferior aquí para controlar mejor el espacio */
+}
+
+.option h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.option p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+/* Contenedor de la columna central (logo) */
+.middle-content {
+    flex: 0.3; /* Hacemos que el contenedor central (logo) ocupe menos espacio */
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Centra el logo verticalmente */
+    position: relative; /* Necesario para colocar el logo en el centro */
+    margin-left: 40px; /* Más margen a la izquierda */
+    margin-right: 40px; /* Más margen a la derecha */
+}
+
+/* Logo en el centro */
+.middle-content .spotify-logo img {
+    width: 100px; /* Logo más grande */
+}
+
+/* Columna derecha */
+.right-content {
+    flex: 0.7; /* Aumentamos el tamaño de la columna derecha */
+    display: flex;
+    justify-content: center;
+    padding-left: 50px; /* Un poco de espacio a la izquierda */
+}
+
+.right-content img {
+    max-width: 90%; /* Hace que la imagen ocupe todo el espacio disponible */
+    height: auto; /* Asegura que la imagen mantenga sus proporciones */
+    object-fit: cover; /* Mantiene la proporción de la imagen y cubre el contenedor */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .right-content {
+        padding-left: 0; /* Elimina el padding en pantallas pequeñas */
+    }
+
+    .right-content img {
+        max-width: 90%; /* Permite que la imagen ocupe más espacio en pantallas pequeñas */
+        height: auto;
+    }
+
+    /* Ajuste de la columna izquierda en pantallas pequeñas */
+    .left-content {
+        flex: 1; /* Deja que la columna izquierda ocupe el espacio completo */
+        padding-right: 0;
+        text-align: center;
+    }
+}
