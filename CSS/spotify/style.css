@@ -197,21 +197,146 @@ header nav ul li a {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .right-content {
-        padding-left: 0; /* Elimina el padding en pantallas pequeñas */
+/* Media Queries para pantallas medianas */
+@media (max-width: 1024px) {
+    /* Navbar: logo en el centro y los li en fila debajo del logo */
+    header .container {
+        flex-direction: column; /* El logo estará arriba, luego los links */
+        align-items: center; /* Centra los elementos */
     }
 
-    .right-content img {
-        max-width: 90%; /* Permite que la imagen ocupe más espacio en pantallas pequeñas */
-        height: auto;
+    header .logo {
+        margin-bottom: 10px; /* Añadimos poco espacio debajo del logo */
     }
 
-    /* Ajuste de la columna izquierda en pantallas pequeñas */
+    header nav ul {
+        display: flex;
+        flex-direction: row; /* Los links estarán en una fila debajo del logo */
+        padding: 0;
+        justify-content: center; /* Centra los links */
+        gap: 20px; /* Espacio entre los links */
+    }
+
+    header nav ul li {
+        margin: 0; /* Sin margen adicional */
+    }
+
+    header nav ul li a {
+        font-size: 1.2em; /* Aumentamos el tamaño de los links */
+    }
+
+    /* Reorganizar las características (¿Qué hay en Spotify?) */
+    .feature-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Apilamos las características en columna */
+        gap: 20px; /* Espaciado entre las características */
+    }
+
+    .feature {
+        margin-bottom: 20px;
+    }
+
+    /* Reorganizar las columnas en el "search-browse-discover" */
+    .search-browse-discover .container {
+        flex-direction: column; /* Apilamos las columnas verticalmente */
+        align-items: center; /* Centramos todo */
+    }
+
+    /* Columna izquierda */
     .left-content {
-        flex: 1; /* Deja que la columna izquierda ocupe el espacio completo */
-        padding-right: 0;
+        flex: 1;
         text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Columna derecha */
+    .right-content {
+        flex: 1;
+        margin-top: 20px;
+        padding-left: 0;
+    }
+
+    /* Columna central (logo) */
+    .middle-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .middle-content .spotify-logo img {
+        width: 120px; /* Logo más pequeño en pantallas medianas */
+    }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Reorganizar las características (¿Qué hay en Spotify?) */
+    .feature-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Cada característica ocupa una fila completa */
+        gap: 15px; /* Añadir margen entre las características */
+    }
+
+    .feature {
+        margin-bottom: 15px; /* Añadir un margen inferior entre las características */
+    }
+
+    /* Navbar: logo en el centro y los li en columna */
+    header .container {
+        flex-direction: column; /* Reorganizamos el navbar para que los elementos estén en columna */
+        align-items: center; /* Centramos los elementos */
+    }
+
+    header .logo {
+        margin-bottom: 20px; /* Añadimos espacio debajo del logo */
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column; /* Ponemos los elementos del navbar en columna */
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Espaciamos los elementos de la barra de navegación */
+    }
+
+    header nav ul li a {
+        font-size: 1.2em; /* Hacemos los links más grandes */
+    }
+
+    /* Reorganizar las columnas en el "search-browse-discover" */
+    .search-browse-discover .container {
+        flex-direction: column; /* Apilamos las columnas verticalmente */
+        align-items: center; /* Centramos todo */
+    }
+
+    /* Columna izquierda */
+    .left-content {
+        flex: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Columna derecha */
+    .right-content {
+        flex: 1;
+        margin-top: 20px; /* Añadimos margen superior */
+        padding-left: 0;
+    }
+
+    /* Columna central (logo) */
+    .middle-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .middle-content .spotify-logo img {
+        width: 100px; /* Logo más pequeño en pantallas pequeñas */
     }
 }
