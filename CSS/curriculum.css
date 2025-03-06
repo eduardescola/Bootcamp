@@ -84,20 +84,47 @@ body {
     color: red;
     font-weight: bold;
 }
-.wishlist, .linkedin {
-    display: block;
+.wishlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 10px 0;
-    padding: 10px;
-    background-color: #ffa41c;
+    padding: 12px;
+    background-color: #ff4d4d;
     border: none;
     cursor: pointer;
     color: white;
     font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.wishlist:hover {
+    background-color: #cc0000;
+}
+.wishlist i {
+    margin-right: 8px;
+}
+.linkedin {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 12px;
+    background-color: #0077b5;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
-.wishlist i, .linkedin i {
-    margin-right: 5px;
+.linkedin:hover {
+    background-color: #005582;
+}
+.linkedin i {
+    margin-right: 8px;
 }
 .related-section {
     background-color: white;
