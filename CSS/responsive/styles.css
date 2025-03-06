@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -97,18 +98,22 @@ body {
 .main-content .stats {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
-.main-content .votes {
-  background: #f0f0f0;
-  padding: 5px 10px;
-  border-radius: 5px;
+.main-content .votes, .main-content .comments {
+  background: #f0f0f0; /* Fondo similar para ambos */
+  padding: 5px 10px; /* Espaciado dentro de la cajita */
+  border-radius: 10px; /* Bordes redondeados */
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 5px; /* Espacio entre el ícono y el número */
 }
-.main-content .votes img {
+.main-content .votes img, .main-content .comments img {
   width: 15px;
-  height: 15px;
+  height: 15px; /* Tamaño consistente para ambos íconos */
+}
+.main-content .comments {
+  opacity: 0.6; /* Comentarios más desvanecidos */
 }
 
 .sidebar {
@@ -121,6 +126,17 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #e1e1e1;
   margin-bottom: 15px;
+}
+.sidebar .widget p {
+  font-size: 12px; /* Tamaño más pequeño */
+  color: #aaa; /* Gris claro */
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.sidebar .widget button {
+  background-color: #da552f;
+  color: white;
+  padding: 4px;
 }
 .sidebar .live-chats {
   display: flex;

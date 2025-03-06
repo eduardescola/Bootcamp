@@ -112,20 +112,25 @@ body {
   .stats {
     display: flex;
     align-items: center;
+    gap: 10px;
   }
 
-  .votes {
-    background: #f0f0f0;
-    padding: 5px 10px;
-    border-radius: 5px;
+  .votes, .comments {
+    background: #f0f0f0;  /* Fondo similar para ambos */
+    padding: 5px 10px;  /* Espaciado dentro de la cajita */
+    border-radius: 10px;  /* Bordes redondeados */
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 5px;  /* Espacio entre el ícono y el número */
   }
-
-  .votes img {
+  
+  .votes img, .comments img {
     width: 15px;
-    height: 15px;
+    height: 15px;  /* Tamaño consistente para ambos íconos */
+  }
+  
+  .comments {
+    opacity: 0.6;  /* Comentarios más desvanecidos */
   }
 }
 
@@ -138,6 +143,19 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid $border-color;
     margin-bottom: 15px;
+
+    p {
+      font-size: 12px;  /* Tamaño más pequeño */
+      color: #aaa;  /* Gris claro */
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    button{
+      background-color: #da552f;
+      color: white;
+      padding: 4px;
+    }
   }
 
   .live-chats {
