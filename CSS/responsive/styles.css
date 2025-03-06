@@ -138,6 +138,11 @@ body {
   color: white;
   padding: 4px;
 }
+.sidebar hr.line-separator {
+  border: none; /* Elimina el borde por defecto */
+  border-top: 1px solid #e1e1e1; /* Línea fina de color gris */
+  margin: 10px 0; /* Añade un poco de espacio alrededor */
+}
 .sidebar .live-chats {
   display: flex;
   flex-direction: column;
