@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -50,11 +49,10 @@ body {
   max-width: 1100px;
   margin: 20px auto;
   gap: 20px;
-  flex-direction: row; /* Aquí cambiamos a dirección en fila */
 }
 
 .main-content {
-  flex: 2; /* El contenido principal ocupa 2/3 de la página */
+  flex: 2;
 }
 .main-content .section-header {
   margin-bottom: 20px;
@@ -71,7 +69,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #e1e1e1;
-  width: 100%; /* Tarjetas ocupando todo el ancho disponible */
+  width: 100%;
   display: flex;
   gap: 15px;
   flex-direction: row;
@@ -114,7 +112,7 @@ body {
 }
 
 .sidebar {
-  flex: 1; /* La barra lateral ocupa 1/3 del espacio */
+  flex: 1;
 }
 .sidebar .widget {
   background: white;
@@ -122,31 +120,66 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #e1e1e1;
-  margin-bottom: 15px; /* Espacio entre los widgets */
+  margin-bottom: 15px;
 }
-.sidebar .widget h3 {
+.sidebar .live-chats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e1e1;
+  height: 300px; /* Altura controlada */
+  overflow-y: auto; /* Desplazamiento si hay contenido adicional */
+}
+.sidebar .chat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #e1e1e1;
+  flex-direction: row;
+}
+.sidebar .chat-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sidebar .chat-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sidebar .chat-info h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.sidebar .chat-info p {
+  font-size: 12px;
+  color: #777;
   margin-bottom: 10px;
 }
-.sidebar .widget button {
+.sidebar .remind-me {
   background: #da552f;
   color: white;
   border: none;
-  padding: 10px;
-  width: 100%;
+  padding: 3px 7px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 10px;
+  width: 80px;
+  align-self: flex-start;
+  transition: background 0.3s ease;
+  margin-top: 5px;
 }
-.sidebar .widget button:hover {
+.sidebar .remind-me:hover {
   background: #b64220;
-}
-.sidebar .live-chats ul {
-  list-style-type: none;
-  padding: 0;
-}
-.sidebar .live-chats li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #555;
 }
 
 .footer {
