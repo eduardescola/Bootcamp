@@ -118,6 +118,7 @@ body {
 
 .sidebar {
   flex: 1;
+  flex: 0 0 300px;
 }
 .sidebar .widget {
   background: white;
@@ -161,7 +162,6 @@ body {
   gap: 10px;
   padding: 10px;
   border-bottom: 1px solid #e1e1e1;
-  flex-direction: row;
 }
 .sidebar .chat-img {
   width: 40px;
@@ -177,19 +177,18 @@ body {
   justify-content: center;
 }
 .sidebar .chat-info h4 {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 .sidebar .chat-info p {
-  font-size: 12px;
+  font-size: 8px;
   color: #777;
   margin-bottom: 10px;
 }
 .sidebar .remind-me {
-  background: #da552f;
-  color: white;
-  border: none;
+  color: black;
+  border: solid black;
   padding: 3px 7px;
   border-radius: 5px;
   cursor: pointer;
