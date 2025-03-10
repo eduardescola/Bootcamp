@@ -318,12 +318,12 @@ body {
   margin-top: 20px;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1201px) {
   .container {
     max-width: 992px;
   }
 }
-@media (max-width: 992px) {
+@media (min-width: 993px) and (max-width: 1200px) {
   .container {
     flex-direction: column;
     padding: 0 20px;
@@ -371,13 +371,170 @@ body {
     margin-left: 10px; /* Añadir margen entre el campo de email y el botón */
   }
 }
-@media (max-width: 600px) {
-  .header {
+@media (min-width: 601px) and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .main-content {
+    width: 100%;
+  }
+  /* Ajustes en el header */
+  .header .navigation {
+    display: flex;
+    flex-wrap: wrap; /* Permitimos que los enlaces se ajusten si es necesario */
+  }
+  .header .logo {
+    font-size: 18px;
+  }
+  .header .search-bar {
+    font-size: 9px;
+  }
+  .header .login {
+    font-size: 9px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap; /* Esto asegura que los elementos no se ajusten a nuevas filas */
+    overflow: hidden; /* Esto ocultará cualquier contenido desbordado */
+    white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
+  }
+  .header .nav-links a {
+    font-size: 9px;
+  }
+  /* Hacer las flechas más pequeñas */
+  .header .header-arrows .arrow {
+    width: 9px;
+    height: 9px;
+  }
+  /* Ajustar las imágenes de las tarjetas */
+  .card img {
+    width: 100%; /* Hacer las imágenes de las tarjetas responsivas */
+    max-width: 70px; /* Limitar el tamaño máximo de las imágenes */
+    max-height: 70px;
+    height: auto; /* Mantener la proporción de las imágenes */
+  }
+  /* Suscripción: ajustar disposición y tamaños */
+  .subscription-bar {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: white;
+    padding: 15px 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Necesario para posicionar el botón close */
+  }
+  .subscription-bar span {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+  .subscription-bar .email,
+  .subscription-bar .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .subscription-bar .email {
+    margin-bottom: 2px;
+  }
+  .subscription-bar .close {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px;
+    right: 10px; /* Coloca el botón en la esquina superior derecha */
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #aaa;
+  }
+  .subscription-bar .message {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  /* Formulario de suscripción */
+  .subscription-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .subscription-form input {
+    width: 60%; /* Hacer el campo de email más pequeño */
+    max-width: 200px;
+    max-height: 20px;
+    padding: 10px;
+    font-size: 12px;
+    margin-right: 10px; /* Separación entre el campo y el botón */
+    margin-bottom: 10px; /* Para asegurar que no se aplasten en pantallas más pequeñas */
+  }
+  .subscription-form button {
+    width: 35%; /* Hacer el botón más pequeño */
+    max-width: 70px;
+    max-height: 30px;
+    padding: 10px;
+    font-size: 7px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 600px) {
+  /* Ocultar la barra de suscripción */
+  .subscription-bar {
+    display: none;
+  }
+  /* Ocultar la slidebar */
+  .sidebar {
+    display: none;
+  }
+  /* Ajustar la disposición de los elementos para pantallas pequeñas */
+  body {
+    font-size: 14px; /* Reducir tamaño de fuente */
+    padding: 10px; /* Ajustar los márgenes o relleno */
+  }
+  .header {
+    text-align: center; /* Centrar los textos en el encabezado */
+    font-size: 9px;
   }
   .search-bar {
-    width: 100%;
-    margin: 10px 0;
+    height: 15px;
+  }
+  .main-content {
+    padding: 15px; /* Agregar relleno para evitar que el contenido esté pegado */
+  }
+  .button {
+    width: 100%; /* Hacer que los botones ocupen todo el ancho */
+    margin: 10px 0; /* Espaciado entre los botones */
+  }
+  .nav-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap; /* Esto asegura que los elementos no se ajusten a nuevas filas */
+    overflow: hidden; /* Esto ocultará cualquier contenido desbordado */
+    white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
+  }
+  .card img {
+    width: 100%; /* Hacer las imágenes de las tarjetas responsivas */
+    max-width: 70px; /* Limitar el tamaño máximo de las imágenes */
+    max-height: 70px;
+    height: auto; /* Mantener la proporción de las imágenes */
+  }
+  main h2 {
+    font-size: 18px;
+  }
+  .card h3 {
+    font-size: 14px;
+  }
+  .card p {
+    font-size: 10px;
+  }
+  .stats span {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=styles.css.map */
