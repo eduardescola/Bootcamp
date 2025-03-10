@@ -328,8 +328,47 @@ body {
     flex-direction: column;
     padding: 0 20px;
   }
-  .main-content, .sidebar {
+  .main-content {
     width: 100%;
+  }
+  /* Ocultar la sidebar en pantallas pequeñas */
+  .sidebar {
+    display: none;
+  }
+  /* Ajustar tamaños en el header */
+  .header .logo {
+    font-size: 20px; /* Más pequeño */
+  }
+  .header .search-bar {
+    font-size: 14px; /* Reducir tamaño de la fuente en la barra de búsqueda */
+  }
+  .header .login {
+    font-size: 14px; /* Reducir tamaño de la fuente en el login */
+  }
+  .header .nav-links a {
+    font-size: 14px; /* Reducir tamaño de la fuente en los enlaces de navegación */
+  }
+  /* Hacer las flechas más pequeñas */
+  .header .header-arrows .arrow {
+    width: 18px; /* Hacer las flechas más pequeñas */
+    height: 18px; /* Hacer las flechas más pequeñas */
+  }
+  /* Aumentar el tamaño de la caja de suscripción */
+  .subscription-bar {
+    width: 90%; /* Hacer la caja más ancha */
+    max-width: 1100px; /* Máximo ancho */
+    padding: 15px 20px; /* Ajustar padding de la caja de suscripción */
+  }
+  .subscription-form input {
+    width: 100%; /* Hacer el campo de email más ancho */
+    max-width: 350px; /* Limitar el ancho máximo */
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    padding: 12px 15px; /* Ajustar padding dentro del campo */
+  }
+  .subscription-form button {
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    padding: 12px 20px; /* Ajustar el tamaño del botón */
+    margin-left: 10px; /* Añadir margen entre el campo de email y el botón */
   }
 }
 @media (max-width: 600px) {
