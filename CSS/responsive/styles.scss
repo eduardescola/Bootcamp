@@ -31,9 +31,19 @@ body {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: $primary-color;
+  width: 40px;  /* Ajusta el tamaño del logo */
+  height: 40px; /* Ajusta el tamaño del logo */
+  border-radius: 50%; /* Hace el logo redondo */
+  overflow: hidden;  /* Asegura que la imagen no se desborde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
 }
 
 .search-bar {
@@ -365,11 +375,6 @@ body {
     display: none;
   }
 
-  /* Ajustar tamaños en el header */
-  .header .logo {
-    font-size: 20px; /* Más pequeño */
-  }
-
   .header .search-bar {
     font-size: 14px; /* Reducir tamaño de la fuente en la barra de búsqueda */
   }
@@ -428,8 +433,9 @@ body {
     flex-wrap: wrap;  /* Permitimos que los enlaces se ajusten si es necesario */
   }
 
-  .header .logo {
-    font-size: 18px;
+  .logo {
+    height: 30px;
+    width: 30px;
   }
 
   .header .search-bar {
@@ -564,6 +570,11 @@ body {
 .header {
   text-align: center; /* Centrar los textos en el encabezado */
   font-size: 9px;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
 }
 
 .search-bar{
