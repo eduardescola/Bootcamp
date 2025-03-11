@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Arrays</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let arr = [];
+
+            function updateDisplay() {
+                $("#arrayDisplay").text(JSON.stringify(arr));
+            }
+
+            $("#push").click(function () {
+                arr.push(prompt("Ingrese un valor para agregar al final:"));
+                updateDisplay();
+            });
+
+            $("#unshift").click(function () {
+                arr.unshift(prompt("Ingrese un valor para agregar al inicio:"));
+                updateDisplay();
+            });
+
+            $("#insert").click(function () {
+                let index = parseInt($("#insertIndex").val());
+                let value = prompt("Ingrese un valor para insertar:");
+                arr.splice(index, 0, value);
+                updateDisplay();
+            });
+
+            $("#pop").click(function () {
+                arr.pop();
+                updateDisplay();
+            });
+
+            $("#shift").click(function () {
+                arr.shift();
+                updateDisplay();
+            });
+
+            $("#remove").click(function () {
+                let index = parseInt($("#removeIndex").val());
+                arr.splice(index, 1);
+                updateDisplay();
+            });
+
+            updateDisplay();
+        });
+    </script>
+</head>
+<body>
+    <h2>Ejercicio de Arrays</h2>
+    <div>
+        <h3>Agregar Elemento</h3>
+        <button id="push">push</button>
+        <button id="unshift">unshift</button>
+        <button id="insert">insert at</button>
+        <input type="number" id="insertIndex" min="0" value="0">
+    </div>
+    <div>
+        <h3>Eliminar Elemento</h3>
+        <button id="pop">pop</button>
+        <button id="shift">shift</button>
+        <button id="remove">remove at</button>
+        <input type="number" id="removeIndex" min="0" value="0">
+    </div>
+    <h3>Array:</h3>
+    <p id="arrayDisplay">[]</p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Toggle Color</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ejemplo de Toggle de Color</h2>
+
+    <p id="parrafo1">Este es el primer párrafo. ¡Haz clic en el botón para cambiar su color!</p>
+    <p id="parrafo2">Este es el segundo párrafo. ¡Haz clic en el otro botón para cambiar su color!</p>
+
+    <!-- Botones -->
+    <button id="toggleRed">Cambiar color a rojo (jQuery)</button>
+    <button id="toggleBlue">Cambiar color a azul (JS puro)</button>
+
+    <script>
+        // Usando jQuery para cambiar color a rojo
+        $("#toggleRed").click(function () {
+            $("#parrafo1").toggleClass("rojo");
+        });
+
+        // Usando JavaScript puro para cambiar color a azul
+        document.getElementById("toggleBlue").addEventListener("click", function () {
+            var parrafo2 = document.getElementById("parrafo2");
+            parrafo2.style.color = (parrafo2.style.color === "blue" ? "" : "blue");
+        });
+    </script>
+
+    <style>
+        /* Definir la clase para el color rojo */
+        .rojo {
+            color: red;
+        }
+    </style>
+
+</body>
+</html>

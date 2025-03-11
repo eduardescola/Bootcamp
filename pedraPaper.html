@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Piedra, Papel o Tijera</title>
+</head>
+<body>
+    <h1>Juego Piedra, Papel o Tijera</h1>
+
+    <!-- Botones para que el usuario elija -->
+    <button onclick="jugar('piedra')">Piedra</button>
+    <button onclick="jugar('papel')">Papel</button>
+    <button onclick="jugar('tijera')">Tijera</button>
+
+    <script>
+        // Función para obtener la opción de la computadora de manera aleatoria
+        function obtenerOpcionComputadora() {
+            const opciones = ["piedra", "papel", "tijera"];
+            const indiceAleatorio = Math.floor(Math.random() * 3);
+            return opciones[indiceAleatorio];
+        }
+
+        // Función para determinar el ganador
+        function determinarGanador(jugador, computadora) {
+            if (jugador === computadora) {
+                return "¡Es un empate!";
+            }
+
+            if (
+                (jugador === "piedra" && computadora === "tijera") ||
+                (jugador === "papel" && computadora === "piedra") ||
+                (jugador === "tijera" && computadora === "papel")
+            ) {
+                return "¡Ganaste!";
+            } else {
+                return "¡Perdiste!";
+            }
+        }
+
+        // Función principal para jugar
+        function jugar(eleccionJugador) {
+            const opcionesValidas = ["piedra", "papel", "tijera"];
+
+            // Si la elección del jugador es válida
+            if (!opcionesValidas.includes(eleccionJugador)) {
+                document.write("Opción no válida. Elige entre piedra, papel o tijera.<br>");
+                return;
+            }
+
+            const eleccionComputadora = obtenerOpcionComputadora();
+
+            // Mostrar las elecciones en la pantalla
+            document.write("<h2>Tu elección: " + eleccionJugador + "</h2>");
+            document.write("<h2>Elección de la computadora: " + eleccionComputadora + "</h2>");
+
+            // Mostrar el resultado
+            const resultado = determinarGanador(eleccionJugador, eleccionComputadora);
+            document.write("<h2>" + resultado + "</h2>");
+        }
+    </script>
+</body>
+</html>
