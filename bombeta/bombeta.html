@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interruptor de Bombilla</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .container {
+            text-align: center;
+        }
+        .imagen {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Encender y Apagar Bombilla</h2>
+        <img src="./off.jpg" class="imagen" id="bombilla" alt="Bombilla Apagada">
+        <img src="./boff.jpg" class="imagen" id="interruptor" alt="Interruptor" style="cursor: pointer;">
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            let encendido = false;
+
+            $("#interruptor").click(function () {
+                encendido = !encendido;
+                $("#bombilla").attr("src", encendido ? "./on.jpg" : "./off.jpg");
+                $("#interruptor").attr("src", encendido ? "./bon.jpg" : "./boff.jpg");
+            });
+        });
+    </script>
+</body>
+</html>

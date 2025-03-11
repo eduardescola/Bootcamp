@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltear Cartas</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .carta {
+            width: 150px;
+            height: 220px;
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejercicio de Voltear Cartas</h2>
+    <img src="./card-front.png" class="carta" id="carta1" alt="Carta">
+    <img src="./card-back.png" class="carta" id="carta2" alt="Carta">
+
+    <script>
+        $(document).ready(function () {
+            $(".carta").hover(
+                function () {
+                    $(this).attr("src", "./card-front.png");
+                },
+                function () {
+                    $(this).attr("src", "./card-back.png");
+                }
+            );
+        });
+    </script>
+</body>
+</html>
