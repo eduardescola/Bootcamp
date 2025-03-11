@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Nombre</title>
+    <script>
+        function mostrarNombre() {
+            // Recibir el nombre del usuario
+            let nombre = prompt("¿Cuál es tu nombre?");
+            
+            // Mostrar el nombre en el div con id 'nombre'
+            document.getElementById("nombre").innerHTML = "Hola, " + nombre + "!";
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio: Mostrar Nombre</h1>
+    <button onclick="mostrarNombre()">Haz clic para ingresar tu nombre</button>
+    <p id="nombre"></p>
+</body>
+</html>
