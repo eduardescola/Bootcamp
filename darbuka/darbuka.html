@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darbuka Sounds</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('./img/1.webp'); /* Reemplaza con tu imagen de fondo */
+            background-size: cover;
+        }
+        h1{
+            color: #f4c542;
+        }
+        .boton {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #f4c542;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Darbuka Sounds</h1>
+    <button class="boton" data-sonido="Darbuka_06_76_SP.mp3">W</button>
+    <button class="boton" data-sonido="Darbuka_18_76_SP.mp3">A</button>
+    <button class="boton" data-sonido="Darbuka_42_76_SP.mp3">S</button>
+    <button class="boton" data-sonido="Darbuka_48_76_SP.mp3">D</button>
+    <button class="boton" data-sonido="Darbuka_66_76_SP.mp3">E</button>
+    
+    <script>
+        function reproducirSonido(sonido) {
+            let audio = new Audio('sounds/' + sonido);
+            audio.play();
+        }
+        
+        document.querySelectorAll('.boton').forEach(boton => {
+            boton.addEventListener('click', () => {
+                reproducirSonido(boton.getAttribute('data-sonido'));
+            });
+        });
+        
+        document.addEventListener('keydown', (event) => {
+            const teclas = {
+                'w': 'Darbuka_06_76_SP.mp3',
+                'a': 'Darbuka_18_76_SP.mp3',
+                's': 'Darbuka_42_76_SP.mp3',
+                'd': 'Darbuka_48_76_SP.mp3',
+                'e': 'Darbuka_66_76_SP.mp3'
+            };
+            if (teclas[event.key]) {
+                reproducirSonido(teclas[event.key]);
+            }
+        });
+    </script>
+</body>
+</html>
