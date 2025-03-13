@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #c6e48b;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 50%;
+            margin: auto;
+            gap: 10px;
+        }
+        .section {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .eat { background-color: lightgreen; }
+        .play { background-color: lightyellow; }
+        .fight { background-color: lightcoral; }
+        .sleep { background-color: lightblue; }
+        .bar {
+            width: 100%;
+            height: 10px;
+            background-color: black;
+            margin-top: 5px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .bar div {
+            height: 100%;
+            background-color: green;
+            width: 50%;
+            border-radius: 5px;
+        }
+        img {
+            width: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tamagotchi</h1>
+    <img src="./img/pikaxu.png" id="pet" alt="Tamagotchi">
+    <h2 id="happiness">Happiness: 50%</h2>
+    <div class="container">
+        <div class="section eat">
+            <h3>EAT</h3>
+            <button onclick="changeStat('food', 10)">Feed</button>
+            <div class="bar"><div id="foodBar"></div></div>
+        </div>
+        <div class="section play">
+            <h3>PLAY</h3>
+            <button onclick="changeStat('fun', 10)">Play</button>
+            <div class="bar"><div id="funBar"></div></div>
+        </div>
+        <div class="section fight">
+            <h3>FIGHT</h3>
+            <button onclick="changeStat('strength', 10)">Train</button>
+            <div class="bar"><div id="strengthBar"></div></div>
+        </div>
+        <div class="section sleep">
+            <h3>SLEEP</h3>
+            <button onclick="changeStat('energy', 10)">Sleep</button>
+            <div class="bar"><div id="energyBar"></div></div>
+        </div>
+    </div>
+    <script>
+        let stats = { food: 50, fun: 50, strength: 50, energy: 50, happiness: 50 };
+        function updateBars() {
+            $("#foodBar").css("width", stats.food + "%");
+            $("#funBar").css("width", stats.fun + "%");
+            $("#strengthBar").css("width", stats.strength + "%");
+            $("#energyBar").css("width", stats.energy + "%");
+            $("#happiness").text("Happiness: " + stats.happiness + "%");
+        }
+        function changeStat(stat, amount) {
+            stats[stat] = Math.min(100, Math.max(0, stats[stat] + amount));
+            stats.happiness = (stats.food + stats.fun + stats.strength + stats.energy) / 4;
+            updateBars();
+        }
+        updateBars();
+    </script>
+</body>
+</html>
