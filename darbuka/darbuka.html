@@ -9,19 +9,46 @@
             text-align: center;
             background-image: url('./img/1.webp'); /* Reemplaza con tu imagen de fondo */
             background-size: cover;
+            margin: 0;
+            padding: 0;
         }
-        h1{
+        h1 {
             color: #f4c542;
+            font-size: 2rem;
+            margin-top: 30px;
         }
         .boton {
             display: inline-block;
-            margin: 10px;
-            padding: 15px;
-            font-size: 20px;
+            margin: 20px;
+            padding: 25px;
+            font-size: 25px;
             cursor: pointer;
-            background-color: #f4c542;
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
+            width: 120px;
+            height: 120px;
+            background-size: cover;
+            color: #f4c542;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            transition: transform 0.2s ease;
+        }
+        .boton:hover {
+            transform: scale(1.1);
+        }
+        .boton[data-sonido="Darbuka_06_76_SP.mp3"] {
+            background-image: url('./img/1.webp'); /* Imagen personalizada para el botón W */
+        }
+        .boton[data-sonido="Darbuka_18_76_SP.mp3"] {
+            background-image: url('./img/2.webp'); /* Imagen personalizada para el botón A */
+        }
+        .boton[data-sonido="Darbuka_42_76_SP.mp3"] {
+            background-image: url('./img/3.webp'); /* Imagen personalizada para el botón S */
+        }
+        .boton[data-sonido="Darbuka_48_76_SP.mp3"] {
+            background-image: url('./img/4.webp'); /* Imagen personalizada para el botón D */
+        }
+        .boton[data-sonido="Darbuka_66_76_SP.mp3"] {
+            background-image: url('./img/5.webp'); /* Imagen personalizada para el botón E */
         }
     </style>
 </head>
@@ -32,7 +59,7 @@
     <button class="boton" data-sonido="Darbuka_42_76_SP.mp3">S</button>
     <button class="boton" data-sonido="Darbuka_48_76_SP.mp3">D</button>
     <button class="boton" data-sonido="Darbuka_66_76_SP.mp3">E</button>
-    
+
     <script>
         function reproducirSonido(sonido) {
             let audio = new Audio('sounds/' + sonido);
