@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego Piedra, Papel o Tijera</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Para los íconos -->
+  <script src="./javascript/piedraPapel.js" defer></script> <!-- Enlaza el archivo JS compilado desde TypeScript -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .icon {
+      font-size: 50px;
+      margin: 20px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .icon:hover {
+      transform: scale(1.2);
+    }
+    .resultado {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .mensaje {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Juego Piedra, Papel o Tijera</h1>
+
+  <div>
+    <span class="icon" id="piedra"><i class="fas fa-hand-rock"></i></span>
+    <span class="icon" id="papel"><i class="fas fa-hand-paper"></i></span>
+    <span class="icon" id="tijera"><i class="fas fa-hand-scissors"></i></span>
+  </div>
+
+  <div class="resultado">
+    <p id="resultadoJugador">Selecciona una opción</p>
+    <p id="resultadoComputadora">La computadora está pensando...</p>
+    <p class="mensaje" id="mensajeResultado"></p>
+  </div>
+
+</body>
+</html>

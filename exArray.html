@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Arrays</title>
+</head>
+<body>
+    <h1>Ejercicio de Arrays</h1>
+
+    <div>
+        <h2>Añadir Elemento</h2>
+        <button onclick="pushElement()">Push</button>
+        <button onclick="unshiftElement()">Unshift</button>
+        <button onclick="insertarEnIndice()">Insertar en índice</button>
+        <input type="number" id="indiceInsertar" placeholder="Índice">
+        <input type="number" id="elementoInsertar" placeholder="Elemento">
+    </div>
+
+    <div>
+        <h2>Eliminar Elemento</h2>
+        <button onclick="popElement()">Pop</button>
+        <button onclick="shiftElement()">Shift</button>
+        <button onclick="eliminarEnIndice()">Eliminar en índice</button>
+        <input type="number" id="indiceEliminar" placeholder="Índice">
+    </div>
+
+    <ul id="listaArray"></ul>
+
+    <script src="./javascript/array.js"></script>
+</body>
+</html>
