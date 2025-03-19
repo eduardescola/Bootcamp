@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuck Norris Jokes - NES CSS</title>
+
+  <!-- Incluir NES.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" />
+  <script src="../javascript/chuck/chuck.js" defer></script> <!-- Compilación de TypeScript a JavaScript -->
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 50px;
+    }
+
+    #joke-container {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+
+    .button-container {
+      margin-top: 30px;
+    }
+
+    #jokeButton {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="nes-text is-primary">Chuck Norris Jokes</h1>
+
+  <!-- Contenedor para el chiste -->
+  <div id="joke-container" class="nes-container is-rounded is-dark">
+    <p id="jokeText">Haz clic en el botón para obtener un chiste de Chuck Norris.</p>
+  </div>
+
+  <!-- Botón para obtener un nuevo chiste -->
+  <div class="button-container">
+    <button id="jokeButton" class="nes-btn is-primary">Obtener Chiste</button>
+  </div>
+
+</body>
+</html>
