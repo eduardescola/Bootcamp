@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Bombilla</title>
+  <script src="../javascript/bombilla/bombilla.js" defer></script> <!-- El archivo JS compilado desde TypeScript -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f4f4f4;
+    }
+
+    #botonControl {
+      margin-top: 20px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      padding: 10px;
+    }
+
+    #bombilla {
+      margin-top: 20px;
+      width: 100px; /* Tamaño de la bombilla */
+      height: 150px; /* Tamaño de la bombilla */
+    }
+
+    #botonControl img {
+      width: 80px; /* Tamaño del botón */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Control de Bombilla</h1>
+
+  <!-- Imagen de la bombilla -->
+  <div>
+    <img id="bombilla" src="./off.jpg" alt="Bombilla Apagada">
+  </div>
+  
+  <!-- Imagen del botón (interruptor) -->
+  <div>
+    <button id="botonControl">
+      <img src="./boff.jpg" alt="Botón OFF">
+    </button>
+  </div>
+
+</body>
+</html>

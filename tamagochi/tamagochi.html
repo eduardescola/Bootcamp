@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamagotchi Interactivo</title>
+  <script src="../javascript/tamagochi/tamagochi.js" defer></script> <!-- El archivo JS compilado desde TypeScript -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .tamagotchi {
+      margin-top: 30px;
+    }
+
+    #tamagotchiImage {
+      width: 150px; /* Ajusta el tamaño de la imagen */
+      height: 150px;
+    }
+
+    .barra {
+      width: 100%;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      margin: 10px 0;
+      height: 20px;
+    }
+
+    .barra span {
+      display: block;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .actions {
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tamagotchi Interactivo</h1>
+
+  <!-- Imagen del Tamagotchi -->
+  <div class="tamagotchi">
+    <img id="tamagotchiImage" src="./pikaxu.png" alt="Tamagotchi">
+  </div>
+
+  <!-- Barras de salud, felicidad, cansancio y lucha -->
+  <div>
+    <h2>Salud</h2>
+    <div class="barra">
+      <span id="healthBar" style="width: 100%; background-color: green;"></span>
+    </div>
+
+    <h2>Felicidad</h2>
+    <div class="barra">
+      <span id="happinessBar" style="width: 100%; background-color: yellow;"></span>
+    </div>
+
+    <h2>Cansancio</h2>
+    <div class="barra">
+      <span id="tirednessBar" style="width: 0%; background-color: red;"></span>
+    </div>
+
+    <h2>Lucha</h2>
+    <div class="barra">
+      <span id="fightBar" style="width: 100%; background-color: blue;"></span>
+    </div>
+  </div>
+
+  <!-- Botones de acción -->
+  <div class="actions">
+    <button id="eatButton">Comer</button>
+    <button id="playButton">Jugar</button>
+    <button id="fightButton">Luchar</button>
+    <button id="sleepButton">Dormir</button>
+  </div>
+
+</body>
+</html>
