@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de Programación Orientada a Objetos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../javascript/quiz/quiz.js" defer></script> <!-- El archivo JavaScript (o TypeScript compilado) -->
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>Quiz de Programación Orientada a Objetos</h1>
+    
+    <!-- Pregunta -->
+    <div class="question-container">
+      <span id="question"></span>
+    </div>
+
+    <!-- Opciones de respuestas -->
+    <div class="options-container">
+      <button class="option-button" id="option1"></button>
+      <button class="option-button" id="option2"></button>
+      <button class="option-button" id="option3"></button>
+      <button class="option-button" id="option4"></button>
+    </div>
+
+    <!-- Botón para pasar a la siguiente pregunta -->
+    <button id="nextButton" class="next-button" onclick="nextQuestion()">Siguiente</button>
+
+    <!-- Resultado final -->
+    <div id="result" class="result-container">
+      <h2>Resultado:</h2>
+      <p id="score"></p>
+    </div>
+  </div>
+
+</body>
+</html>
