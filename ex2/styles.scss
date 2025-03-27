@@ -1,0 +1,83 @@
+// Reseteamos el margen y padding de html, body, y todos los elementos para evitar el scroll
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Incluye padding y border dentro del tamaño total */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Asegura que html y body ocupen toda la altura */
+  overflow: hidden; /* Elimina cualquier posible desbordamiento */
+}
+
+// Importa las funciones, variables y mixins de Bootstrap antes de cualquier cosa
+@import "../node_modules/bootstrap/scss/functions";  // Funciones de Bootstrap
+@import "../node_modules/bootstrap/scss/variables";  // Variables de Bootstrap (incluye breakpoints)
+@import "../node_modules/bootstrap/scss/mixins";     // Mixins de Bootstrap (incluye el uso de breakpoints)
+
+// Personaliza los breakpoints para que aumenten de 250px en 250px
+$grid-breakpoints: (
+  xs: 0px,
+  sm: 250px,
+  md: 500px,
+  lg: 750px,
+  xl: 1000px,
+  xxl: 1250px
+);
+
+// Asegúrate de que el contenedor ocupe toda la pantalla
+.container-fluid {
+    width: 100vw; /* Ocupa el 100% del ancho del viewport */
+    height: 100vh; /* Ocupa el 100% de la altura del viewport */
+    margin: 0; /* Elimina cualquier margen extra */
+    padding: 0; /* Elimina cualquier padding extra */
+  }
+
+// Establece el color de fondo en base a los breakpoints
+
+// XS, SM y MD → violet
+@include media-breakpoint-up(xs) {
+  .container-fluid {
+    background-color: violet;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .container-fluid {
+    background-color: violet;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .container-fluid {
+    background-color: violet;
+  }
+}
+
+// LG, XL y XXL → green
+@include media-breakpoint-up(lg) {
+  .container-fluid {
+    background-color: green;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .container-fluid {
+    background-color: green;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .container-fluid {
+    background-color: green;
+  }
+}
+
+// Usar el mixin media-breakpoint-between para aplicar estilos entre md y xl
+@include media-breakpoint-between(md, xl) {
+  .container-fluid {
+    background-color: violet;
+  }
+}
