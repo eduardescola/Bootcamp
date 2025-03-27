@@ -1,0 +1,46 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Incluye padding y border dentro del tamaño total */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Asegura que html y body ocupen toda la altura */
+  overflow: hidden; /* Elimina cualquier posible desbordamiento */
+}
+
+.container-fluid {
+  width: 100vw; /* Ocupa el 100% del ancho del viewport */
+  height: 100vh; /* Ocupa el 100% de la altura del viewport */
+  margin: 0; /* Elimina cualquier margen extra */
+  padding: 0; /* Elimina cualquier padding extra */
+}
+
+@media (min-width: 576px) {
+  .container-fluid {
+    background-color: yellow;
+  }
+}
+@media (min-width: 768px) {
+  .container-fluid {
+    background-color: blue;
+  }
+}
+@media (min-width: 992px) {
+  .container-fluid {
+    background-color: green;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid {
+    background-color: purple;
+  }
+}
+@media (min-width: 1400px) {
+  .container-fluid {
+    background-color: orange;
+  }
+}/*# sourceMappingURL=styles.css.map */
