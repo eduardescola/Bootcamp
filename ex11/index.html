@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartado - Tablas</title>
+    <!-- Incluir Bootstrap desde un CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        .table-container div {
+            width: 45%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor de las tablas -->
+    <div class="container-fluid">
+
+<!-- Contenedor de las tablas: Fila superior con 2 tablas -->
+<div class="table-container">
+    <!-- Tabla 1: Esquina superior izquierda -->
+    <div>
+        <h4>Tabla 1: Esquina superior izquierda</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Tel No.</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fila 1 con color primary -->
+                <tr class="bg-primary text-white">
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>123-456-7890</td>
+                    <td>john.doe@example.com</td>
+                </tr>
+                <!-- Fila 2 con color secondary -->
+                <tr class="bg-secondary text-white">
+                    <td>Jane</td>
+                    <td>Smith</td>
+                    <td>234-567-8901</td>
+                    <td>jane.smith@example.com</td>
+                </tr>
+                <!-- Fila 3 con color success -->
+                <tr class="bg-success text-white">
+                    <td>Mary</td>
+                    <td>Johnson</td>
+                    <td>345-678-9012</td>
+                    <td>mary.johnson@example.com</td>
+                </tr>
+                <!-- Fila 4 con color danger -->
+                <tr class="bg-danger text-white">
+                    <td>James</td>
+                    <td>Brown</td>
+                    <td>456-789-0123</td>
+                    <td>james.brown@example.com</td>
+                </tr>
+                <!-- Fila 5 con color warning -->
+                <tr class="bg-warning text-dark">
+                    <td>Patricia</td>
+                    <td>Williams</td>
+                    <td>567-890-1234</td>
+                    <td>patricia.williams@example.com</td>
+                </tr>
+                <!-- Fila 6 con color info -->
+                <tr class="bg-info text-dark">
+                    <td>Alan</td>
+                    <td>Turing</td>
+                    <td>678-901-2345</td>
+                    <td>alan.turing@example.com</td>
+                </tr>
+                <!-- Fila 7 con color light -->
+                <tr class="bg-light text-dark">
+                    <td>Grace</td>
+                    <td>Hopper</td>
+                    <td>789-012-3456</td>
+                    <td>grace.hopper@example.com</td>
+                </tr>
+                <!-- Fila 8 con color dark -->
+                <tr class="bg-dark text-white">
+                    <td>Charles</td>
+                    <td>Darwin</td>
+                    <td>890-123-4567</td>
+                    <td>charles.darwin@example.com</td>
+                </tr>
+                <!-- Fila 9 con color muted -->
+                <tr class="bg-muted text-dark">
+                    <td>Jane</td>
+                    <td>Austen</td>
+                    <td>901-234-5678</td>
+                    <td>jane.austen@example.com</td>
+                </tr>
+                <!-- Fila 10 con color transparent -->
+                <tr class="bg-transparent text-dark">
+                    <td>Emily</td>
+                    <td>Dickinson</td>
+                    <td>012-345-6789</td>
+                    <td>emily.dickinson@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+            <!-- Tabla 2: Esquina superior derecha -->
+            <div>
+                <h4>Tabla 2: Esquina superior derecha</h4>
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Tel No.</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-info">
+                            <td>Alice</td>
+                            <td>Martinez</td>
+                            <td>678-901-2345</td>
+                            <td>alice.martinez@example.com</td>
+                        </tr>
+                        <tr class="table-light">
+                            <td>Bob</td>
+                            <td>Davis</td>
+                            <td>789-012-3456</td>
+                            <td>bob.davis@example.com</td>
+                        </tr>
+                        <tr class="table-dark">
+                            <td>Charlie</td>
+                            <td>Garcia</td>
+                            <td>890-123-4567</td>
+                            <td>charlie.garcia@example.com</td>
+                        </tr>
+                        <tr class="table-primary">
+                            <td>David</td>
+                            <td>Miller</td>
+                            <td>901-234-5678</td>
+                            <td>david.miller@example.com</td>
+                        </tr>
+                        <tr class="table-success">
+                            <td>Eve</td>
+                            <td>Wilson</td>
+                            <td>012-345-6789</td>
+                            <td>eve.wilson@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Fila inferior con 2 tablas: Centro inferior izquierda y derecha -->
+        <div class="table-container-bottom">
+            <!-- Tabla 3: Centro inferior izquierda -->
+            <div>
+                <h4>Tabla 3: Centro inferior izquierda</h4>
+                <table class="table table-bordered table-borderless">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Tel No.</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila activa (resaltada) -->
+                        <tr class="table-active">
+                            <td>Jack</td>
+                            <td>Taylor</td>
+                            <td>123-987-6543</td>
+                            <td>jack.taylor@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Linda</td>
+                            <td>Moore</td>
+                            <td>234-876-5432</td>
+                            <td>linda.moore@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Michael</td>
+                            <td>Anderson</td>
+                            <td>345-765-4321</td>
+                            <td>michael.anderson@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- Tabla 4: Centro inferior derecha -->
+            <div>
+                <h4>Tabla 4: Centro inferior derecha</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Tel No.</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Grace</td>
+                            <td>Lee</td>
+                            <td>Not Available</td>
+                            <td>Not Available</td>
+                        </tr>
+                        <tr>
+                            <td>Oliver</td>
+                            <td>Harris</td>
+                            <td>Not Available</td>
+                            <td>Not Available</td>
+                        </tr>
+                        <tr>
+                            <td>Sophia</td>
+                            <td>Clark</td>
+                            <td>Not Available</td>
+                            <td>Not Available</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Incluir Bootstrap JS desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

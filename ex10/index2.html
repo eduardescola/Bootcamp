@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartado 2 - Diseño con Espacios y Columnas</title>
+    <!-- Incluir Bootstrap desde un CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-fluid mt-5">
+        <!-- Fila 1: 3 columnas, con espacio vacío generado a la derecha -->
+        <div class="row mb-3 justify-content-start">
+            <!-- Primera columna de 4 de ancho -->
+            <div class="col-4 bg-primary text-white p-3">One of three columns</div>
+            <!-- Segunda columna de 4 de ancho -->
+            <div class="col-4 bg-success text-white p-3">One of three columns</div>
+            <!-- El espacio vacío a la derecha se genera debido al tamaño de la fila -->
+        </div>
+
+        <!-- Fila 2: 2 columnas de 4 de ancho, alineadas al centro, espacio vacío a los lados -->
+        <div class="row mb-3 justify-content-center">
+            <!-- Primera columna de 4 de ancho -->
+            <div class="col-4 bg-danger text-white p-3">Espacio en blanco de la mitad de 1</div>
+            <!-- Segunda columna de 4 de ancho -->
+            <div class="col-4 bg-warning text-white p-3">One of two columns</div>
+        </div>
+
+        <!-- Fila 3: 3 columnas, con espacio vacío generado automáticamente, alineadas a la derecha -->
+        <div class="row mb-3 justify-content-end">
+            <div class="col-4 bg-success text-white p-3">One of three columns</div>
+            <div class="col-4 bg-primary text-white p-3">One of three columns</div>
+        </div>
+
+        <!-- Fila 4: Columnas con espacio equilibrado a la izquierda y derecha, usando 'justify-content-around' -->
+        <div class="row mb-3 justify-content-around">
+            <!-- Columna 1 -->
+            <div class="col-4 bg-danger text-white p-3">One of two columns</div>
+            
+            <!-- Columna 2 -->
+            <div class="col-4 bg-dark text-white p-3">One of two columns</div>
+        </div>
+
+        <!-- Fila 5: 2 columnas con espacio vacío en la segunda columna -->
+        <div class="row mb-3 justify-content-between">
+            <div class="col-4 bg-secondary text-white p-3">One of two columns</div>
+            <div class="col-4 bg-secondary text-white p-3">One of two columns</div>
+        </div>
+
+        <!-- Fila 6: 2 columnas con espacio equilibrado entre ellas y en los extremos -->
+        <div class="row mb-3 justify-content-evenly">
+            <div class="col-4 bg-dark text-white p-3">One of two columns</div>
+            <div class="col-4 bg-warning text-white p-3">One of two columns</div>
+        </div>
+    </div>
+
+    <!-- Incluir Bootstrap JS desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

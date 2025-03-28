@@ -1,0 +1,15 @@
+// Sobrescribir las variables de Bootstrap antes de importarlo
+$primary: #6a1b9a;         // Morado
+$secondary: #f44336;       // Rojo
+$success: #4caf50;         // Verde
+$info: #2196f3;            // Azul
+$warning: #ff9800;         // Naranja
+$danger: #f44336;          // Rojo (de nuevo)
+$light: #f1f1f1;           // Gris claro
+$dark: #212121;            // Gris oscuro
+
+// Importar Bootstrap después de sobrescribir las variables
+@import "../node_modules/bootstrap/scss/functions";  // Funciones de Bootstrap
+@import "../node_modules/bootstrap/scss/variables";  // Variables de Bootstrap (incluye breakpoints)
+@import "../node_modules/bootstrap/scss/mixins";     // Mixins de Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";  // Ahora importa Bootstrap

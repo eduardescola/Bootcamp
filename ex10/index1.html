@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartado 1 - Alineación Vertical de Columnas</title>
+    <!-- Incluir Bootstrap desde un CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <!-- Fila con 3 columnas -->
+        <div class="row" style="height: 200px;"> <!-- La altura se agrega para que se vea la alineación -->
+            <!-- Columna 1: Alineada al inicio de la fila -->
+            <div class="col-4 align-self-start bg-primary text-white p-3">Columna 1 (align-self-start)</div>
+            <!-- Columna 2: Alineada al centro de la fila -->
+            <div class="col-4 align-self-center bg-success text-white p-3">Columna 2 (align-self-center)</div>
+            <!-- Columna 3: Alineada al final de la fila -->
+            <div class="col-4 align-self-end bg-danger text-white p-3">Columna 3 (align-self-end)</div>
+        </div>
+    </div>
+
+    <!-- Incluir Bootstrap JS desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
