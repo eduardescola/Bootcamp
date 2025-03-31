@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Responsivo con Bootstrap</title>
+  <!-- Vinculación de Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilo adicional para los contenedores de colores */
+    .contenedor {
+      height: 200px;
+      color: white;
+      text-align: center;
+      padding-top: 70px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .rojo { background-color: #FF4136; }
+    .verde { background-color: #2ECC40; }
+    .rosa { background-color: #F012BE; }
+    .naranja { background-color: #FF851B; }
+    .azul { background-color: #0074D9; }
+    .blanco { background-color: #FFFFFF; color: black; }
+
+    .contenedor-azul {
+      height: 150px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Contenedor Principal -->
+  <div class="container-fluid">
+    <!-- Fila 1 -->
+    <div class="row">
+      <!-- Contenedor Rojo -->
+      <div class="col-12 col-md-2 col-lg-2 col-xl-2 contenedor rojo">
+        Rojo
+      </div>
+      
+      <!-- Contenedor Rosa -->
+      <div class="col-12 col-md-10 col-lg-10 col-xl-10 contenedor rosa">
+        Rosa
+      </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="row">
+      <!-- Contenedor Naranja -->
+      <div class="col-12 col-md-6 col-lg-6 col-xl-6 contenedor naranja">
+        Naranja
+      </div>
+
+      <!-- Contenedor Verde -->
+      <div class="col-12 col-md-6 col-lg-6 col-xl-6 contenedor verde">
+        Verde
+      </div>
+    </div>
+
+    <!-- Fila 3 -->
+    <div class="row">
+      <!-- Contenedores Azules -->
+      <div class="col-4 col-md-4 col-lg-4 col-xl-4 contenedor azul contenedor-azul">
+        Azul 1
+      </div>
+      <div class="col-4 col-md-4 col-lg-4 col-xl-4 contenedor azul contenedor-azul">
+        Azul 2
+      </div>
+      <div class="col-4 col-md-4 col-lg-4 col-xl-4 contenedor azul contenedor-azul">
+        Azul 3
+      </div>
+    </div>
+
+    <!-- Fila 4 -->
+    <div class="row">
+      <!-- Contenedor Blanco -->
+      <div class="col-12 col-md-12 col-lg-12 col-xl-12 contenedor blanco">
+        Blanco
+      </div>
+    </div>
+  </div>
+
+  <!-- Vinculación de JavaScript de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
