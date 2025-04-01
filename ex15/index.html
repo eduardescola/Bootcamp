@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio de Bootstrap Responsive 2</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Colores personalizados */
+    .bg-cyan {
+      background-color: #00ffff;
+    }
+    .bg-light-blue {
+      background-color: #a0c4ff;
+    }
+    .bg-light-gray {
+      background-color: #cccccc;
+    }
+    .bg-orange {
+      background-color: #ffaa77;
+    }
+    
+    /* Altura mínima para los bloques */
+    .min-height {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Bordes para visualizar mejor los bloques */
+    .border-block {
+      border: 2px solid #666;
+      margin: 3px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid p-2">
+    <!-- Tamaños md, lg y xl -->
+    <div class="row d-none d-md-block mb-4">
+      <h5 class="text-center">Tamaños md, lg y xl:</h5>
+      
+      <!-- Header -->
+      <div class="row mb-2">
+        <div class="col-12 bg-success text-center text-white p-2">
+          Header
+        </div>
+      </div>
+      
+      <!-- Bloques azules numerados -->
+      <div class="row mb-2">
+        <div class="col-md-3 offset-md-1">
+          <div class="bg-light-blue min-height border-block">1</div>
+        </div>
+        <div class="col-md-3">
+          <div class="bg-light-blue min-height border-block">2</div>
+        </div>
+        <div class="col-md-3 offset-md-2">
+          <div class="bg-light-blue min-height border-block">4</div>
+        </div>
+      </div>
+      
+      <div class="row mb-2">
+        <div class="col-md-3">
+          <div class="bg-light-blue min-height border-block">3</div>
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="bg-light-gray min-height border-block">d</div>
+            </div>
+            <div class="col-md-3">
+              <div class="bg-light-gray min-height border-block">c</div>
+            </div>
+            <div class="col-md-3">
+              <div class="bg-light-gray min-height border-block">b</div>
+            </div>
+            <div class="col-md-3">
+              <div class="bg-light-gray min-height border-block">a</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Barra Desktop -->
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="bg-cyan min-height border-block">Desktop</div>
+        </div>
+      </div>
+      
+      <!-- Bloques naranjas con emojis -->
+      <div class="row mb-2">
+        <div class="col-md-3 offset-md-3">
+          <div class="bg-orange min-height border-block">:&#40;</div>
+        </div>
+        <div class="col-md-3">
+          <div class="bg-orange min-height border-block">:D</div>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <div class="row">
+        <div class="col-12 bg-success text-center text-white p-2">
+          Footer
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tamaño sm -->
+    <div class="row d-none d-sm-block d-md-none mb-4">
+      <h5 class="text-center">Tamaño sm:</h5>
+      
+      <!-- Header -->
+      <div class="row mb-2">
+        <div class="col-12 bg-success text-center text-white p-2">
+          Header
+        </div>
+      </div>
+      
+      <!-- Bloques azules numerados -->
+      <div class="row mb-2">
+        <div class="col-3">
+          <div class="bg-light-blue min-height border-block">1</div>
+        </div>
+        <div class="col-3">
+          <div class="bg-light-blue min-height border-block">2</div>
+        </div>
+        <div class="col-3">
+          <div class="bg-light-blue min-height border-block">3</div>
+        </div>
+        <div class="col-3">
+          <div class="bg-light-blue min-height border-block">4</div>
+        </div>
+      </div>
+      
+      <!-- Barra Tablet -->
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="bg-cyan min-height border-block">Tablet</div>
+        </div>
+      </div>
+      
+      <!-- Bloques grises con letras -->
+      <div class="row mb-2">
+        <div class="col-3">
+          <div class="bg-light-gray min-height border-block">a</div>
+        </div>
+        <div class="col-3">
+          <div class="bg-light-gray min-height border-block">b</div>
+        </div>
+        <div class="col-3">
+          <div class="bg-light-gray min-height border-block">c</div>
+        </div>
+        <div class="col-3">
+          <div class="bg-light-gray min-height border-block">d</div>
+        </div>
+      </div>
+      
+      <!-- Bloques naranjas con emojis -->
+      <div class="row mb-2">
+        <div class="col-6">
+          <div class="bg-orange min-height border-block">:D</div>
+        </div>
+        <div class="col-6">
+          <div class="bg-orange min-height border-block">:&#40;</div>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <div class="row">
+        <div class="col-12 bg-success text-center text-white p-2">
+          Footer
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tamaño xs -->
+    <div class="row d-block d-sm-none">
+      <h5 class="text-center">Tamaño xs:</h5>
+      
+      <!-- Header -->
+      <div class="row mb-2">
+        <div class="col-12 bg-success text-center text-white p-2">
+          Header
+        </div>
+      </div>
+      
+      <!-- Bloques azules numerados en cuadrícula 2x2 -->
+      <div class="row mb-2">
+        <div class="col-6">
+          <div class="bg-light-blue min-height border-block">1</div>
+        </div>
+        <div class="col-6">
+          <div class="bg-light-blue min-height border-block">2</div>
+        </div>
+        <div class="col-6">
+          <div class="bg-light-blue min-height border-block">3</div>
+        </div>
+        <div class="col-6">
+          <div class="bg-light-blue min-height border-block">4</div>
+        </div>
+      </div>
+      
+      <!-- Bloques grises con letras en cuadrícula 2x2 -->
+      <div class="row mb-2">
+        <div class="col-6">
+          <div class="bg-light-gray min-height border-block">a</div>
+        </div>
+        <div class="col-6">
+          <div class="bg-light-gray min-height border-block">b</div>
+        </div>
+        <div class="col-6">
+          <div class="bg-light-gray min-height border-block">c</div>
+        </div>
+        <div class="col-6">
+          <div class="bg-light-gray min-height border-block">d</div>
+        </div>
+      </div>
+      
+      <!-- Barra Mobile -->
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="bg-cyan min-height border-block">Mobile</div>
+        </div>
+      </div>
+      
+      <!-- Bloque naranja con emoji -->
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="bg-orange min-height border-block">:D</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (opcional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
